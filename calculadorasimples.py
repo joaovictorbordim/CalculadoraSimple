@@ -82,6 +82,24 @@ b_16.place(x=118, y=200)
 
 
 
+b_11 = Button(frame_body, text='2', width=5, height=2, bg=cor4, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_11.place(x=59, y=150)
+
+b_12 = Button(frame_body, text='3', width=5, height=2, bg=cor4, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_12.place(x=118, y=150)
+
+b_13 = Button(frame_body, text='+', width=5, height=2, bg=cor5, fg=cor2, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_13.place(x=176, y=150)
+
+b_14 = Button(frame_body, text='0', width=5, height=2, bg=cor4, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_14.place(x=0, y=200)
+
+b_15 = Button(frame_body, text='.', width=5, height=2, bg=cor4, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_15.place(x=59, y=200)
+
+b_16 = Button(frame_body, text='=', width=16, height=2, bg=cor5, fg=cor2, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_16.place(x=118, y=200)
+
 
 
 
