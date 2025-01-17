@@ -11,7 +11,7 @@ cor5 = '#ffab40' #Laranja
 
 janela =Tk()
 janela.title('Calculadora Simples')
-janela.geometry('235x318')
+janela.geometry('235x310')
 janela.config(bg=cor1)
 
 #Frames de display e botões
@@ -22,13 +22,33 @@ frame_body = Frame(janela, width=235, height=268)
 frame_body.grid(row=1, column=0)
 
 
+todos_valores = '' #Variável que armazena todos os valores digitados
+
+# Criando as funções dos botões
+def entrar_valores(event):
+
+    global todos_valores
+
+    todos_valores = todos_valores + event 
+    resultado = eval('123')
+
+#Passando o resultado para o display
+    valor_texto.set(todos_valores)
+
+
+
+#Criando label = Dados do display = Label exibir um simples texto
+valor_texto = StringVar()
+
+app_label = Label(frame_screen, textvariable=valor_texto, width=16, height=2, bg=cor3, fg=cor2, padx=7, relief=FLAT, anchor='e', justify=RIGHT, font=('ivy 18'))
+app_label.place(x=0, y=0)
+
+
 #criando botões
-
-
 b_1 = Button(frame_body, text='C', width=11, height=2, bg=cor4, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE) #bg=blackground=cor de fundo, fg==foreground=cor da letra, font=fonte, relief=tipo de borda, overrelief=efeito de borda
 b_1.place(x=0, y=0)
 
-b_2 = Button(frame_body, text='%', width=5, height=2, bg=cor4, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE) #height, width = tamanho do botão
+b_2 = Button(frame_body, command=lambda: entrar_valores('%'), text='%', width=5, height=2, bg=cor4, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE) #height, width = tamanho do botão
 b_2.place(x=118, y=0)
 
 b_3 = Button(frame_body, text='/', width=5, height=2, bg=cor5, fg=cor2, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
@@ -78,7 +98,6 @@ b_15.place(x=59, y=200)
 
 b_16 = Button(frame_body, text='=', width=16, height=2, bg=cor5, fg=cor2, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_16.place(x=118, y=200)
-
 
 
 
